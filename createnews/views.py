@@ -47,9 +47,7 @@ def down_file(request, **kwargs):
     wb = openpyxl.Workbook()
     ws = wb.active
     ws.title = "News"
-
     row_num = 0
-
     columns = [
         ("ID", 5),
     ]

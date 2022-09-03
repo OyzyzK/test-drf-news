@@ -9,6 +9,7 @@
 </head>
 <body>
 <h1>News</h1>
+<input type="button" value="Скачать .xlsx" onClick='location.href="http://127.0.0.1:8000/api/export/news/"'>
 <br>
 {% for news in news_items %}
     <h2>
@@ -23,7 +24,6 @@
     <h1>
         {{news.creation_date}}
     </h1>
-<button>Нажми меня</button>
 {% endfor %}
 </body>
 </html>

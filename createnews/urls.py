@@ -4,6 +4,7 @@ from django.conf.urls.static import static
 from createnews.views import NewListJson, NewIDJson
 from news import settings
 
+
 urlpatterns = [
                   path('news_h/', views.index),
                   path('news_h/<int:pk>/', views.news_id),
