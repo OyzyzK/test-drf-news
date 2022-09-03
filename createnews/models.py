@@ -13,7 +13,7 @@ class NewsItem(models.Model):
     title = models.CharField(max_length=50, verbose_name='Название новости', unique=True)
     description = models.TextField(verbose_name='Описание поста')
     image = models.ImageField(verbose_name='Картинка новости', default=None, null=True, blank=True, upload_to='img')
-    creation_date = models.DateField(auto_now_add=True, verbose_name='Дата создания поста')
+    creation_date = models.DateTimeField(auto_now_add=True, verbose_name='Дата создания поста')
 
     def __str__(self):
         return f'Новость: {self.title}'

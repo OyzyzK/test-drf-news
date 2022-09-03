@@ -46,7 +46,7 @@ def down_file(request, **kwargs):
     queryset = NewsItem.objects.all()   # adjust accordingly
     wb = openpyxl.Workbook()
     ws = wb.active
-    ws.title = "Your Title"
+    ws.title = "News"
 
     row_num = 0
 
@@ -72,6 +72,6 @@ def down_file(request, **kwargs):
             c = ws.cell(row=row_num + 1, column=col_num + 1)
             c.value = row[col_num]
     response = HttpResponse(content_type='application/vnd.openxmlformats-officedocument.spreadsheetml.sheet')
-    response['Content-Disposition'] = 'attachment; filename=this-is-your-filename.xlsx'
+    response['Content-Disposition'] = 'attachment; filename=test.xlsx'
     wb.save(response)
     return response
