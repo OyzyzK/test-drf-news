@@ -43,7 +43,7 @@ class NewIDJson(generics.RetrieveAPIView):
 
 
 def down_file(request, **kwargs):
-    queryset = NewsItem.objects.all()   # adjust accordingly
+    queryset = NewsItem.objects.all()
     wb = openpyxl.Workbook()
     ws = wb.active
     ws.title = "News"
