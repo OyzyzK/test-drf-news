@@ -42,7 +42,7 @@ class NewIDJson(generics.RetrieveAPIView):
         return NewsItem.objects.filter(id=self.kwargs['pk'])
 
 
-def down_file(request, **kwargs):
+def down_file():
     queryset = NewsItem.objects.all()
     wb = openpyxl.Workbook()
     ws = wb.active
